@@ -1,0 +1,399 @@
+:root {
+  /* produto */
+  --purple-light: #a881e6;
+  --purple: #7450ac;
+  --purple-dark: #523480;
+
+  /* base */
+  --gray-100: #fbf9fe;
+  --gray-200: #afabb6;
+  --gray-300: #252529;
+  --gray-400: #17171a;
+  --gray-500: #111112;
+  --gray-600: #0c0c0d;
+
+  /* Feedback */
+  --success-light: #4e995e;
+  --success: #2f723d;
+
+  /* Cores de Apoio */
+  --pink: #db5bbf;
+  --orange: #e07b67;
+  --yellow: #bb9f3a;
+  --green: #8cad51;
+  --blue: #7b94cb;
+  --pink-dark: #251622;
+  --orange-dark: #261a17;
+  --yellow-dark: #211e12;
+  --green-dark: #1c2015;
+  --blue-dark: #1a1d23;
+
+  --cor-fundo: #090909;
+  --cor-fundo-selecionado: #17171a79;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Mobile First */
+
+body {
+  background:
+    url("/assets/img/Cover.svg"),
+    linear-gradient(to right, var(--cor-fundo) 20%, var(--cor-fundo) 85%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: var(--gray-100);
+  width: 100%;
+  height: 100vh;
+  color: var(--gray-100);
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  margin: 25px 0;
+  margin-top: 50px;
+}
+
+#form {
+  width: 95%;
+  margin: 0 auto 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#form .linha {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: auto;
+}
+
+.columnQuantidade{
+  width: 30%;
+  margin: 0;
+  padding: 0;
+}
+
+.flexQuantidade {
+  display: flex;
+  width: 100%;
+}
+
+input,
+select,
+button {
+  height: 35px;
+  padding: 5px;
+  border: 1px solid var(--gray-300);
+  background-color: var(--gray-500);
+  color: #fbf9fe;
+}
+
+button {
+  flex-grow: 0;
+}
+
+#form input#item {
+  padding: 6px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+input.quantidade {
+  width: 100%;
+  border-radius: 5px 0 0 5px;
+}
+
+select.quantidade {
+  font-size: 12px;
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+/* Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+select#categoria {
+  width: 100%;
+  border-radius: 5px;
+}
+
+select {
+  background-color: #17171a;
+}
+
+button#btn {
+  background-color: #7450ac;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50px 50px;
+  cursor: pointer;
+  padding: 0;
+}
+
+button#btn:hover {
+  background-color: #523480;
+}
+
+button#btn:active {
+  box-shadow: inset 0 0 10px black;
+  background-color: #392358;
+}
+
+input:focus,
+select:focus {
+  border: 1px solid #a881e6;
+  outline: none;
+}
+
+label {
+  margin-left: 3px;
+  font-size: 0.9em;
+  opacity: 70%;
+}
+
+/* Section de Lista */
+
+section.lista {
+  width: 95%;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+div.itens {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.categoriaItem {
+  background-color: var(--orange-dark);
+  color: var(--orange);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  padding: 10px;
+  width: 35%;
+  border-radius: 25px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--purple-light);
+  background-color: var(--gray-300);
+  cursor: pointer;
+  margin: 0 15px;
+  border-radius: 3px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--success);
+  background-image: url(/assets/img/icons/Type=check.svg);
+  background-position: center;
+  background-size: 15px;
+}
+
+label.nomeItens {
+  font-size: 15px;
+  opacity: 100%;
+  margin: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+p#quantidadeItens {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.categoriaItem {
+  font-size: 14px;
+}
+
+img#imagemItem {
+  margin-right: 5px;
+}
+
+.btnPonto {
+  color: var(--purple-light);
+  font-size: 19px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.btnPonto:active {
+  transform: scale(1.1);
+}
+
+/* Não Selecionado */
+.naoSelecionado {
+  background-color: var(--gray-400);
+  border: 1px solid var(--gray-300);
+  border-radius: 10px;
+}
+
+/* selecionado */
+
+.selecionado {
+  background-color: var(--cor-fundo-selecionado);
+  border-radius: 10px;
+}
+
+.selecionado .conteudo {
+  opacity: 0.5;
+}
+
+.selecionado label {
+  text-decoration: line-through;
+}
+
+/* Modal */
+
+.lista {
+  position: relative;
+}
+
+#modal {
+  background-color: var(--gray-300);
+  position: absolute;
+  right: 0;
+  top: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+#modal.ativo {
+  display: flex;
+}
+
+.btnModal {
+  background: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+.btnModal:hover {
+  color: var(--blue);
+  transform: scale(1.1);
+}
+
+/* Quando passar o mouse no botão */
+.itens:hover .modal {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.toastify {
+  width: 320px;
+  height: 65px;
+  margin: 20px;
+  box-shadow: none;
+}
+
+.toastify.erro {
+  background: rgb(80, 1, 1);
+  color: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 19px;
+  border-radius: 15px;
+  box-shadow: none;
+}
+
+.toastify.sucesso {
+  background: var(--green);
+  color: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 19px;
+  border-radius: 15px;
+}
+
+.toastify.excluido {
+  background: var(--green);
+  font-size: 20px;
+  width: 225px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+
+  #form {
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  button#btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  button#btn:hover {
+    background-color: #523480;
+  }
+
+  /* Section de Lista */
+  section.lista {
+    width: 55%;
+  }
+
+  .categoriaItem {
+    margin-right: 15px;
+    width: 20%;
+  }
+
+  .btnPonto:hover {
+    transform: scale(1.3);
+  }
+
+}

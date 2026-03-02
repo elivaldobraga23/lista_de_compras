@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/stayle.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+</head>
+<body>
+        <div id="img-background">
+            <h1>Lista De Compras</h1>
+            
+            <!-- Seção de Input -->
+            <section id="form">
+                <div class="column">
+                    <label for="item">Item</label>
+                    <input autocomplete="off" autocapitalize="true" type="text" name="item" id="item" data-mensagem="Digite o nome do item">
+                </div>
+                <div class="linha">
+                    <div class="columnQuantidade">
+                        <label for="quantidade">Quantidade</label>
+                        <div class="flexQuantidade">
+                            <input type="number" class="quantidade" id="quantidade" data-mensagem="Digite a quantidade">
+                            <select class="quantidade" id="unidade" data-mensagem="Selecione uma unidade">
+                                <option value="" selected hidden></option>
+                                <option data-unidade="Unidade" value="unidade">Un</option>
+                                <option data-unidade="Kg" value="kg">Kg</option>
+                                <option data-unidade="Litro" value="litro">L</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div  class="column">
+                        <label for="categoria">Categoria</label>
+                        <select name="categoria" id="categoria" data-mensagem="Selecione uma categoria">
+                            <option value="" selected hidden ></option>
+                            <option value="padaria">Padaria</option>
+                            <option value="legumes">Legumes</option>
+                            <option value="carne">Carne</option>
+                            <option value="fruta">Fruta</option>
+                            <option value="bebida">Bebida</option>
+                            <option value="cereais">Cereais</option>
+                        </select>
+                    </div>
+                    <button id="btn"><span class="material-symbols-outlined">add</span></button>
+                                </section>
+                            </div>
+                </div>        
+        
+        <div id="modal">
+            <button class="btnModal" id="btnExcluir">Excluir</button>
+        </div>
+
+        
+
+    <script type="module" src="assets/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</body>
+</html>
